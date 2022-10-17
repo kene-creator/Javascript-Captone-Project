@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\n\nhtml {\n  box-sizing: border-box;\n  font-size: 62.5%;\n}\n\nbody {\n  font-family: \"Ubuntu\", sans-serif;\n  font-weight: 400;\n  line-height: 1.6;\n  color: #ccc;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n\n.nav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #f9f5f3;\n}\n\n.logo-img {\n  width: 13rem;\n  height: 8rem;\n  margin-left: 4rem;\n}\n\n.search {\n  background-color: #fff;\n  border-radius: 10rem;\n  display: flex;\n  align-items: center;\n  padding-left: 3rem;\n  transition: all 0.3s;\n  margin-right: 8rem;\n}\n\n.search__btn {\n  height: 6rem;\n  width: 18rem;\n  font-weight: 600;\n  font-family: inherit;\n  text-transform: uppercase;\n  color: #fff;\n  cursor: pointer;\n  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);\n  border: none;\n  border-radius: 10rem;\n  align-items: center;\n  justify-content: center;\n  transition: all 0.2s;\n  display: flex;\n}\n\n.search::placeholder {\n  color: #ccc;\n}\n\n.search__field {\n  outline: none;\n}\n\n.search:focus-within {\n  transform: translateY(-2px);\n  box-shadow: 0 0.7rem 3rem rgba(204, 204, 204, 0.08);\n}\n\n.search__field {\n  border: none;\n  background: none;\n  font-family: inherit;\n  color: inherit;\n  font-size: 1.7rem;\n  width: 30rem;\n}\n\n.search__field:focus {\n  outline: none;\n}\n\n.search__icon {\n  width: 2rem;\n  height: 2rem;\n  fill: #fff;\n  margin-right: 2rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;AACF;;AAEA;;;EAGE,mBAAA;AACF;;AAEA;EACE,sBAAA;EACA,gBAAA;AACF;;AAEA;EACE,iCAAA;EACA,gBAAA;EACA,gBAAA;EACA,WAAA;EACA,sBAAA;EACA,4BAAA;AACF;;AAEA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,yBAAA;AACF;;AACA;EACE,YAAA;EACA,YAAA;EACA,iBAAA;AAEF;;AACA;EACE,sBAAA;EACA,oBAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,kBAAA;AAEF;;AACA;EACE,YAAA;EACA,YAAA;EACA,gBAAA;EACA,oBAAA;EACA,yBAAA;EACA,WAAA;EACA,eAAA;EACA,oEAAA;EACA,YAAA;EACA,oBAAA;EACA,mBAAA;EACA,uBAAA;EACA,oBAAA;EACA,aAAA;AAEF;;AACA;EACE,WAAA;AAEF;;AACA;EACE,aAAA;AAEF;;AACA;EACE,2BAAA;EACA,mDAAA;AAEF;;AACA;EACE,YAAA;EACA,gBAAA;EACA,oBAAA;EACA,cAAA;EACA,iBAAA;EACA,YAAA;AAEF;;AAAA;EACE,aAAA;AAGF;;AAAA;EACE,WAAA;EACA,YAAA;EACA,UAAA;EACA,kBAAA;AAGF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: inherit;\r\n}\r\n\r\nhtml {\r\n  box-sizing: border-box;\r\n  font-size: 62.5%;\r\n}\r\n\r\nbody {\r\n  font-family: \"Ubuntu\", sans-serif;\r\n  font-weight: 400;\r\n  line-height: 1.6;\r\n  color: #ccc;\r\n  background-size: cover;\r\n  background-repeat: no-repeat;\r\n}\r\n\r\n.nav {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  background-color: #f9f5f3;\r\n}\r\n.logo-img {\r\n  width: 13rem;\r\n  height: 8rem;\r\n  margin-left: 4rem;\r\n}\r\n\r\n.search {\r\n  background-color: #fff;\r\n  border-radius: 10rem;\r\n  display: flex;\r\n  align-items: center;\r\n  padding-left: 3rem;\r\n  transition: all 0.3s;\r\n  margin-right: 8rem;\r\n}\r\n\r\n.search__btn {\r\n  height: 6rem;\r\n  width: 18rem;\r\n  font-weight: 600;\r\n  font-family: inherit;\r\n  text-transform: uppercase;\r\n  color: #fff;\r\n  cursor: pointer;\r\n  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);\r\n  border: none;\r\n  border-radius: 10rem;\r\n  align-items: center;\r\n  justify-content: center;\r\n  transition: all 0.2s;\r\n  display: flex;\r\n}\r\n\r\n.search::placeholder {\r\n  color: #ccc;\r\n}\r\n\r\n.search__field {\r\n  outline: none;\r\n}\r\n\r\n.search:focus-within {\r\n  transform: translateY(-2px);\r\n  box-shadow: 0 0.7rem 3rem rgba(#ccc, 0.08);\r\n}\r\n\r\n.search__field {\r\n  border: none;\r\n  background: none;\r\n  font-family: inherit;\r\n  color: inherit;\r\n  font-size: 1.7rem;\r\n  width: 30rem;\r\n}\r\n.search__field:focus {\r\n  outline: none;\r\n}\r\n\r\n.search__icon {\r\n  width: 2rem;\r\n  height: 2rem;\r\n  fill: #fff;\r\n  margin-right: 2rem;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -528,6 +528,16 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./img/icon.svg":
+/*!**********************!*\
+  !*** ./img/icon.svg ***!
+  \**********************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icon.svg";
+
 /***/ })
 
 /******/ 	});
@@ -581,6 +591,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -597,6 +619,26 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -611,9 +653,11 @@ var __webpack_exports__ = {};
   \******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _img_icon_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/icon.svg */ "./img/icon.svg");
+
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle81134314aa2437f937cd.js.map
+//# sourceMappingURL=bundlefc93bb0a3da5237d1e31.js.map
