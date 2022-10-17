@@ -10,7 +10,7 @@ const controlRecipes = async () => {
 
     view.render(model.state.search.results);
   } catch (err) {
-    console.log(err);
+    view.renderError();
   }
 };
 

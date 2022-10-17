@@ -4,6 +4,20 @@ import "../styles/style.css";
 class View {
   _parentEle = document.querySelector(".recipe_cards");
   _data;
+  _errorMessage = "Check your internet connection and try again";
+
+  renderError(message = this._errorMessage) {
+    const markup = `<div class="error">
+    <div>
+      <svg>
+        <use href="${icon}#icon-alert-triangle"></use>
+      </svg>
+    </div>
+    <p>${message}</p>
+  </div>`;
+    this._clear();
+    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+  }
 
   _generateMarkUp(data) {
     return `<li class="recipe_card">
