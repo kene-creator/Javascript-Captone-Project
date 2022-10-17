@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f5f3;
+}
+.logo-img {
+  width: 13rem;
+  height: 8rem;
+  margin-left: 4rem;
+}
+
+.search {
+  background-color: #fff;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  transition: all 0.3s;
+  margin-right: 8rem;
+}
+
+.search__btn {
+  height: 6rem;
+  width: 18rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  border: none;
+  border-radius: 10rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.search::placeholder {
+  color: #ccc;
+}
+.search:focus {
+  outline: none;
+}
+
+.search:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 0.7rem 3rem rgba(#ccc, 0.08);
+}
+
+.search__field {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.7rem;
+  width: 30rem;
+}
+
+.search__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+  margin-right: 2rem;
+}
