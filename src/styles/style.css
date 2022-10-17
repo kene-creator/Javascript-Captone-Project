@@ -42,7 +42,7 @@ body {
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
-  margin-right: 8rem;
+  margin: 1rem 8rem 1rem 0;
 }
 
 .search__btn {
@@ -129,6 +129,12 @@ body {
 .recipe_img {
   width: 100%;
   height: 20rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  opacity: 0.7;
 }
 
 .likes {
@@ -138,9 +144,11 @@ body {
 }
 
 .recipe_name {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #615551;
+  line-height: 1;
+  width: 90%;
 }
 
 .recipe_icon {
@@ -159,7 +167,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0.5rem auto;
-  width: 65%;
+  width: 20rem;
   text-decoration: none;
   font-size: 1.8rem;
   color: #fff;
@@ -176,4 +184,26 @@ body {
   height: 2rem;
   fill: #fff;
   margin-left: 1rem;
+}
+
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.spinner svg {
+  height: 15rem;
+  width: 15rem;
+  fill: #f48982;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
