@@ -8,7 +8,6 @@ class Likes {
       const likebtn = e.target.closest(".recipe_icon");
       const likeNum = likebtn.nextElementSibling.firstElementChild;
       let i = 0;
-      console.log(likeNum);
       if (!likebtn) return;
       if (likebtn.firstElementChild.classList.contains("heart-o")) {
         likebtn.innerHTML = `<use href="${icon}#icon-heart"></use>`;
