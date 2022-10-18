@@ -1,6 +1,7 @@
 import "../styles/style.css";
 import * as model from "./model.js";
 import view from "./view.js";
+import likes from "./likes.js";
 
 const controlRecipes = async () => {
   try {
@@ -18,3 +19,4 @@ const init = () => {
   view.addHandlerRender(controlRecipes);
 };
 init();
+likes.renderLikes();

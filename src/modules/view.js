@@ -19,15 +19,18 @@ class View {
     this._parentEle.insertAdjacentHTML("afterbegin", markup);
   }
 
-  _generateMarkUp(data) {
+  _generateMarkUp(data, i) {
     return `<li class="recipe_card">
         <div class="card_detials">
           <img src="${data.img}" alt="" class="recipe_img" />
           <div class="likes">
             <p class="recipe_name">${data.title}</p>
-            <svg class="recipe_icon">
-              <use href="${icon}#icon-heart-o"></use>
-            </svg>
+            <div>
+            <svg data-like="${i}" class="recipe_icon">
+            <use href="${icon}#icon-heart-o" class="heart-o"></use>
+          </svg>
+          <p class="likes_num"><span>0</span> like</p>
+            </div>
           </div>
           <div class="links">
             <a href="${data.sourceURL}" class="recipe_link"
@@ -69,7 +72,6 @@ class View {
 
     this._data = data;
     const markup = this._data.map(this._generateMarkUp).join("");
-    console.log(markup);
     this._clear();
     this._parentEle.insertAdjacentHTML("afterbegin", markup);
   }
