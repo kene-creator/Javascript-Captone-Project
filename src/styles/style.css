@@ -29,6 +29,7 @@ body {
   align-items: center;
   background-color: #f9f5f3;
 }
+
 .logo-img {
   width: 13rem;
   height: 10rem;
@@ -66,16 +67,13 @@ body {
   color: #ccc;
 }
 
-.search__field {
-  outline: none;
-}
-
 .search:focus-within {
   transform: translateY(-2px);
   box-shadow: 0 0.7rem 3rem rgba(#ccc, 0.08);
 }
 
 .search__field {
+  outline: none;
   border: none;
   background: none;
   font-family: inherit;
@@ -83,6 +81,7 @@ body {
   font-size: 1.7rem;
   width: 30rem;
 }
+
 .search__field:focus {
   outline: none;
 }
