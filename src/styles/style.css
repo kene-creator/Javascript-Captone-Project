@@ -221,3 +221,10 @@ body {
   color: #121212;
   font-size: 2rem;
 }
+
+.likes_num {
+  line-height: 1;
+  font-size: 1.3rem;
+  color: #121212;
+  text-align: center;
+}
