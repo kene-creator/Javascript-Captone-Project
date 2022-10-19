@@ -3,6 +3,7 @@ import * as model from "./model.js";
 import view from "./view.js";
 import likes from "./likes.js";
 import search from "./search.js";
+import popup from "./popupView.js";
 
 const controlRecipes = async () => {
   try {
@@ -11,6 +12,7 @@ const controlRecipes = async () => {
     await model.loadResult("pizza");
 
     view.render(model.state.search.results);
+    popup.renderPopup(model.state.search.results);
   } catch (err) {
     view.renderError();
   }
@@ -27,6 +29,7 @@ const controlSearch = async function () {
     await model.loadResult(query);
 
     view.render(model.state.search.results);
+    popup.renderPopup(model.state.search.results);
   } catch (error) {
     search.renderError();
   }
@@ -38,3 +41,4 @@ const init = () => {
 };
 init();
 likes.renderLikes();
+popup.renderCloseBtn();

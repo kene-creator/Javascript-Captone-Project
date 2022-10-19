@@ -115,7 +115,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f9f5f3;
+  background-color: rgba(251, 219, 137, 0.577);
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
   -moz-border-radius: 3rem;
@@ -226,4 +226,98 @@ body {
   font-size: 1.3rem;
   color: #121212;
   text-align: center;
+}
+
+.popup {
+  position: fixed;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 15rem auto;
+  width: 75%;
+  background-color: #f9f5f3cb;
+  backdrop-filter: blur(3px);
+  z-index: 100;
+  padding: 2rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.popup_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_center img {
+  width: 50%;
+  height: 40%;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.popup_name {
+  color: #121212;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.popup_publisher {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  font-size: 1.5rem;
+  color: #121212;
+  margin-top: 1rem;
+}
+
+.comments_dates {
+  color: #121212;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment_input {
+  outline: none;
+  border: none;
+  background: #fff;
+  font-family: inherit;
+  color: #121212;
+  font-size: 1.7rem;
+  width: 30rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  background-blend-mode: normal;
+  box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #ffffff;
+}
+
+.close_icon {
+  width: 2rem;
+  height: 2rem;
+  fill: rgba(255, 0, 0, 0.579);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }

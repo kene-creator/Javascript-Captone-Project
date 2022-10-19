@@ -19,6 +19,7 @@ export const loadResult = async function (query) {
         publisher: rec.publisher,
         img: rec.image_url,
         sourceURL: rec.source_url,
+        socialRank: rec.social_rank,
       };
     });
   } catch (err) {
