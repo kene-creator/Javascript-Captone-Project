@@ -227,3 +227,14 @@ body {
   color: #121212;
   text-align: center;
 }
+
+#footer {
+  border: 1px solid #f9f5f3;
+  color: #121212;
+  background-color: #f9f5f3;
+}
+
+#footer-text {
+  margin: 20px;
+  font-size: 20px;
+}
