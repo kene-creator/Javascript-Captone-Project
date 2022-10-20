@@ -12,6 +12,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scrollbar-color: #f48982 #e0e0e0;
+  scrollbar-width: thin;
 }
 
 body {
@@ -178,6 +180,11 @@ body {
   -o-border-radius: 3rem;
 }
 
+.recipe_comment {
+  border: none;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
 .recipe_direction {
   width: 2rem;
   height: 2rem;
@@ -246,6 +253,7 @@ body {
   -o-border-radius: 3rem;
   height: 90vh;
   overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
 .popup_center {
