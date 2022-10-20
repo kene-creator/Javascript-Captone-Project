@@ -39,12 +39,12 @@ class View {
                 <use href="${icon}#icon-arrow-right"></use>
               </svg>
             </a>
-            <a href="index.html" class="recipe_link"
-              >Comments
+            <button href="index.html" class="recipe_link recipe_comment"
+             id="${data.id}" >Comments
               <svg class="recipe_direction">
                 <use href="${icon}#icon-user"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </li>`;
