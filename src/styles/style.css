@@ -34,8 +34,9 @@ body {
 
 .logo-img {
   width: 13rem;
-  height: 10rem;
+  height: 7rem;
   margin-left: 4rem;
+  margin-top: 0.5rem;
 }
 
 .search {
@@ -111,7 +112,7 @@ body {
 }
 
 .recipe_card {
-  width: 27rem;
+  width: 29rem;
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -328,6 +329,7 @@ body {
   position: absolute;
   top: 2rem;
   right: 2rem;
+  cursor: pointer;
 }
 
 #footer {

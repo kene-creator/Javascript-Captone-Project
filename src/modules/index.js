@@ -47,3 +47,5 @@ popup.renderCloseBtn();
 popup.renderComment();
 
 window.addEventListener("load", comment.refreshComment(COMMENT_API_URL));
+document.querySelector(".home-link").innerHTML =
+  '<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/AllRecipes-Logo.svg/1200px-AllRecipes-Logo.svg.png" alt="logo picture" class="logo-img" />';
