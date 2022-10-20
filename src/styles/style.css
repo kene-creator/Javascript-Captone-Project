@@ -235,7 +235,6 @@ body {
   text-align: center;
 }
 
-
 .popup {
   position: fixed;
   top: 28%;
@@ -329,8 +328,8 @@ body {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  }
-  
+}
+
 #footer {
   border: 1px solid #f9f5f3;
   color: #121212;
