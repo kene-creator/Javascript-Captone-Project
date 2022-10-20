@@ -23,13 +23,13 @@
 - eslint
 - webpack 5
 
-## Authors
+## Author 1
 
-👤 **Author 1**
+👤 **Kenechuwku Agagwu**
 
 - GitHub: [@kene-creator](https://github.com/kene-creator)
 - Twitter: [@kay_yung1](https://twitter.com/kay_yung1)
-- LinkedIn: [Kenechuwku Agagwu](https://linkedin.com/in/kenechukwuagagwu)
+- LinkedIn: [@Kenechuwku Agagwu](https://linkedin.com/in/kenechukwuagagwu)
 
 
 ## Author 2
