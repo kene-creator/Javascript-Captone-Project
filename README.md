@@ -31,9 +31,14 @@
 - Twitter: [@kay_yung1](https://twitter.com/kay_yung1)
 - LinkedIn: [Kenechuwku Agagwu](https://linkedin.com/in/kenechukwuagagwu)
 
-👤 **Author 2**
+
+## Author 2
+
+👤 ** Faranosh Amini **
 
 - GitHub: [@FaranoshAmini](https://github.com/FaranoshAmini)
+- LinkedIn: [@Faranosh_Amini](https://www.linkedin.com/in/faranosh-amini-9b925b23a/)
+- Twitter: [@Faranosh_Amini](https://twitter.com/Faranosh_Amini)
 
 ## 🤝 Contributing
 
