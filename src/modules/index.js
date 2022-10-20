@@ -46,12 +46,4 @@ likes.renderLikes();
 popup.renderCloseBtn();
 popup.renderComment();
 
-// const form = document.querySelector("body").closest(".comment_form");
-// console.log(form);
-
-// form.addEventListener("submit", (e) => {
-//   comment.addComment(e);
-//   form.reset();
-// });
-
 window.addEventListener("load", comment.refreshComment(COMMENT_API_URL));

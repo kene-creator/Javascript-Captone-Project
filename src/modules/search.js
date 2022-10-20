@@ -2,7 +2,7 @@ import icon from "../../img/icon.svg";
 
 class Search {
   _parentElement = document.querySelector(".search");
-  _errorMessage = "Opps! Search is not found!";
+  _errorMessage = "Opps! Search not found!";
 
   getQuery() {
     const query = this._parentElement.querySelector(".search__field").value;

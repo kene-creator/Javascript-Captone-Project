@@ -7,7 +7,6 @@ class Comment {
       const res = await fetch(url);
 
       const data = await res.json();
-      console.log(data);
 
       data.result.forEach((comment, i) => {
         container.innerHTML += ` <p class="comments_dates">

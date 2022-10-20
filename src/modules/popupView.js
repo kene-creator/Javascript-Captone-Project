@@ -39,17 +39,18 @@ class Popup {
       const text = form.children[1];
       const text_2 = form.children[2];
       const date = new Date();
-      console.log(form);
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        parent.innerHTML += `<p class="comments_dates">
-       ${date.toLocaleDateString()} <span class="comment_text">${text.value}: ${
-          text_2.value
-        }</span>
+        e.stopImmediatePropagation();
+        parent.children[1].innerHTML = `Thank you for your Comment`;
+        parent.children[2].innerHTML += `
+        <p class="comments_dates">
+        (${date.toLocaleDateString()}) <span class="comment_text">${
+          text.value
+        }: ${text_2.value}</span>
         </p>`;
-        // comment.addComment(e);
-        console.log(e);
+        comment.addComment(e);
         form.reset();
       });
     });
@@ -71,7 +72,13 @@ class Popup {
       </div>
     </div>
     <div class="popup_center">
-      <p class="popup_name">Comment<span>(0)</span></p>
+    <p class="popup_name">Comments</p>
+    <p class="comments_dates">
+        No Comments
+        </p>;
+        <p class="comments_dates">
+        </p>;
+        <p class="comments_dates">
       <div class="comments">
         <form action="" class="comment_form">
           <p class="popup_name">Add a Comment</p>
@@ -80,6 +87,7 @@ class Popup {
             name="name"
             placeholder="Enter your Name"
             class="comment_input"
+            required
           />
           <textarea
           name="comment"
