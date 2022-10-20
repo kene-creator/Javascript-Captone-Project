@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://kene-creator.github.io/To-do-list-App/dist",
+  "homepage": "http://kene-creator.github.io/Javascript-Captone-Project/dist",
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
