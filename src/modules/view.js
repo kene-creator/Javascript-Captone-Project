@@ -35,7 +35,9 @@ class View {
             <svg data-like="${i}" class="recipe_icon">
             <use href="${icon}#icon-heart-o" class="heart-o"></use>
           </svg>
-          <p class="likes_num"><span>0</span> like</p>
+          <p class="likes_num"><span>${Math.ceil(
+            Math.random() * 5
+          )}</span> like</p>
             </div>
           </div>
           <div class="links">

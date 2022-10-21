@@ -7,6 +7,9 @@ import popup from './popupView.js';
 import comment from './comments.js';
 import { COMMENT_API_URL } from './config';
 
+const nav = document.querySelector(".nav");
+console.log(nav.children[1]);
+
 const controlRecipes = async () => {
   try {
     view.renderSpinner();
@@ -15,6 +18,12 @@ const controlRecipes = async () => {
 
     view.render(model.state.search.results);
     popup.renderPopup(model.state.search.results);
+    const count = (res) => {
+      return `<p class="count">Recipe Count(${res.length})</p>`;
+    };
+    const markupCount = [count(model.state.search.results)].join("");
+
+    homeLink.insertAdjacentHTML("afterend", markupCount);
   } catch (err) {
     view.renderError();
   }
@@ -32,6 +41,14 @@ const controlSearch = async function () {
 
     view.render(model.state.search.results);
     popup.renderPopup(model.state.search.results);
+    const nav = document.querySelector(".nav");
+    nav.children[1].remove();
+    const count = (res) => {
+      return `<p class="count">Recipe Count(${res.length})</p>`;
+    };
+    const markupCount = [count(model.state.search.results)].join("");
+
+    homeLink.insertAdjacentHTML("afterend", markupCount);
   } catch (error) {
     search.renderError();
   }
@@ -46,5 +63,9 @@ likes.renderLikes();
 popup.renderCloseBtn();
 popup.renderComment();
 
+
 window.addEventListener('load', comment.refreshComment(COMMENT_API_URL));
-document.querySelector('.home-link').innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/AllRecipes-Logo.svg/1200px-AllRecipes-Logo.svg.png" alt="logo picture" class="logo-img" />';
+const homeLink = document.querySelector(".home-link");
+homeLink.innerHTML =
+  '<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/AllRecipes-Logo.svg/1200px-AllRecipes-Logo.svg.png" alt="logo picture" class="logo-img" />';
+
