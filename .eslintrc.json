@@ -11,6 +11,18 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [
+          "renderComment",
+          "generateMarkUp",
+          "clear",
+          "addHandlerRender",
+          "renderCloseBtn"
+        ]
+      }
+    ],
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",

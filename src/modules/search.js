@@ -1,29 +1,29 @@
 import icon from '../../img/icon.svg';
 
 class Search {
-  _parentElement = document.querySelector('.search');
+  parentEle = document.querySelector('.search');
 
-  _errorMessage = 'Opps! Search not found!';
+  errorMessage = 'Opps! Search not found!';
 
   getQuery() {
-    const query = this._parentElement.querySelector('.search__field').value;
+    const query = this.parentEle.querySelector('.search__field').value;
     this.clearInputField();
-    this._parentElement.querySelector('.search__field').blur();
+    this.parentEle.querySelector('.search__field').blur();
     return query;
   }
 
   clearInputField() {
-    this._parentElement.querySelector('.search__field').value = '';
+    this.parentEle.querySelector('.search__field').value = '';
   }
 
   addHandler(publisher) {
-    this._parentElement.addEventListener('submit', (e) => {
+    this.parentEle.addEventListener('submit', (e) => {
       e.preventDefault();
       publisher();
     });
   }
 
-  renderError(message = this._errorMessage) {
+  renderError(message = this.errorMessage) {
     const markup = `<div class="error">
     <div>
       <svg>
@@ -32,13 +32,13 @@ class Search {
     </div>
     <p>${message}</p>
   </div>`;
-    this._clear();
+    this.clear();
     document
       .querySelector('.recipe_cards')
       .insertAdjacentHTML('afterbegin', markup);
   }
 
-  _clear() {
+  clear() {
     document.querySelector('.recipe_cards').innerHTML = '';
   }
 }

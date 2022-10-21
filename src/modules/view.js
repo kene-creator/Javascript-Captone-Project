@@ -1,15 +1,14 @@
-import icon from "../../img/icon.svg";
-import "../styles/style.css";
+import icon from '../../img/icon.svg';
+import '../styles/style.css';
 
 class View {
-  _parentEle = document.querySelector(".recipe_cards");
+  parentEle = document.querySelector('.recipe_cards');
 
-  _data;
+  data;
 
-  _errorMessage = "Check your internet connection and try again";
+  errorMessage = 'Check your internet connection and try again';
 
-  // eslint-disable-next-line no-underscore-dangle
-  renderError(message = this._errorMessage) {
+  renderError(message = this.errorMessage) {
     const markup = `<div class="error">
     <div>
       <svg>
@@ -18,14 +17,13 @@ class View {
     </div>
     <p>${message}</p>
   </div>`;
-    // eslint-disable-next-line no-underscore-dangle
-    this._clear();
-    // eslint-disable-next-line no-underscore-dangle
-    this._parentEle.insertAdjacentHTML('afterbegin', markup);
+
+    this.clear();
+
+    this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
-  // eslint-disable-next-line no-underscore-dangle, class-methods-use-this
-  _generateMarkUp(data, i) {
+  generateMarkUp(data, i) {
     return `<li class="recipe_card">
         <div class="card_detials">
           <img src="${data.img}" alt="" class="recipe_img" />
@@ -36,8 +34,8 @@ class View {
             <use href="${icon}#icon-heart-o" class="heart-o"></use>
           </svg>
           <p class="likes_num"><span>${Math.ceil(
-            Math.random() * 5
-          )}</span> like</p>
+    Math.random() * 5,
+  )}</span> like</p>
             </div>
           </div>
           <div class="links">
@@ -59,9 +57,8 @@ class View {
   }
 
   // eslint-disable-next-line no-underscore-dangle
-  _clear() {
-    // eslint-disable-next-line no-underscore-dangle
-    this._parentEle.innerHTML = '';
+  clear() {
+    this.parentEle.innerHTML = '';
   }
 
   renderSpinner() {
@@ -72,27 +69,23 @@ class View {
             </svg>
           </div>`;
 
-    // eslint-disable-next-line no-underscore-dangle
-    this._parentEle.innerHTML = '';
-    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+    this.parentEle.innerHTML = '';
+    this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
   render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0))
-      return this.renderError();
+    if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
 
-    this._data = data;
-    const markup = this._data.map(this._generateMarkUp).join("");
-    this._clear();
-    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+    this.data = data;
+    const markup = this.data.map(this.generateMarkUp).join('');
+    this.clear();
+    return this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
   addHandlerRender(publisher) {
-    ["load"].forEach((ev) =>
-      window.addEventListener(ev, () => {
-        publisher();
-      })
-    );
+    ['load'].forEach((ev) => window.addEventListener(ev, () => {
+      publisher();
+    }));
   }
 }
 export default new View();

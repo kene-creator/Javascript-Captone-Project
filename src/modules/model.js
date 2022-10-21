@@ -1,5 +1,6 @@
-import { API_URL, RES_PER_PAGE } from './config.js';
+import { API_URL } from './config.js';
 import { getJSON } from './helper.js';
+import view from './view.js';
 
 export const state = {
   recipe: {},
@@ -8,7 +9,7 @@ export const state = {
   },
 };
 
-export const loadResult = async function (query) {
+export const loadResult = async (query) => {
   try {
     const data = await getJSON(`${API_URL}${query}`);
 
@@ -21,6 +22,7 @@ export const loadResult = async function (query) {
       socialRank: rec.social_rank,
     }));
   } catch (err) {
+    view.renderError();
     throw err;
   }
 };
