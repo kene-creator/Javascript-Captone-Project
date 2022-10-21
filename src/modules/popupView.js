@@ -1,6 +1,7 @@
 import icon from '../../img/icon.svg';
 import comment from './comments.js';
 
+/* eslint-disable */
 class Popup {
   parentEle = document.querySelector('.recipe_cards');
 
@@ -38,11 +39,9 @@ class Popup {
     body.addEventListener('click', (e) => {
       const form = e.target.closest('.comment_form');
       const parent = form.parentElement.parentElement;
-      const commentParent = form.parentElement.parentElement.parentElement;
       const text = form.children[1];
       const textTwo = form.children[2];
       const date = new Date();
-      console.log(parent.children[2]);
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
