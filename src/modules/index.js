@@ -4,11 +4,6 @@ import view from "./view.js";
 import likes from "./likes.js";
 import search from "./search.js";
 import popup from "./popupView.js";
-import comment from "./comments.js";
-import { COMMENT_API_URL } from "./config";
-
-const nav = document.querySelector(".nav");
-console.log(nav.children[1]);
 
 const controlRecipes = async () => {
   try {
