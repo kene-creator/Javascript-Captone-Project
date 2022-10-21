@@ -1,7 +1,12 @@
-import { loadResult } from './src/modules/model.js';
+import itemCounter from './__mocks__/itemCounter.js';
 
-describe('Test for Items Counter', () => {
-  test('Test Items counter', () => {
-    expect(loadResult()).toBeDefined();
+describe('testing item counter', () => {
+  test('if the counter is working', () => {
+    const arrayItems = [
+      { id: 301, name: 'delcatty' },
+      { id: 302, name: 'sableye' },
+    ];
+
+    expect(itemCounter(arrayItems)).toBe(2);
   });
 });
