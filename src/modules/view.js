@@ -1,12 +1,12 @@
-import icon from "../../img/icon.svg";
-import "../styles/style.css";
+import icon from '../../img/icon.svg';
+import '../styles/style.css';
 
 class View {
-  _parentEle = document.querySelector(".recipe_cards");
+  _parentEle = document.querySelector('.recipe_cards');
 
   _data;
 
-  _errorMessage = "Check your internet connection and try again";
+  _errorMessage = 'Check your internet connection and try again';
 
   // eslint-disable-next-line no-underscore-dangle
   renderError(message = this._errorMessage) {
@@ -36,8 +36,8 @@ class View {
             <use href="${icon}#icon-heart-o" class="heart-o"></use>
           </svg>
           <p class="likes_num"><span>${Math.ceil(
-            Math.random() * 5
-          )}</span> like</p>
+    Math.random() * 5,
+  )}</span> like</p>
             </div>
           </div>
           <div class="links">
@@ -74,25 +74,29 @@ class View {
 
     // eslint-disable-next-line no-underscore-dangle
     this._parentEle.innerHTML = '';
-    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line consistent-return
   render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0))
-      return this.renderError();
+    if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
 
+    // eslint-disable-next-line no-underscore-dangle
     this._data = data;
-    const markup = this._data.map(this._generateMarkUp).join("");
+    // eslint-disable-next-line no-underscore-dangle
+    const markup = this._data.map(this._generateMarkUp).join('');
+    // eslint-disable-next-line no-underscore-dangle
     this._clear();
-    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   addHandlerRender(publisher) {
-    ["load"].forEach((ev) =>
-      window.addEventListener(ev, () => {
-        publisher();
-      })
-    );
+    ['load'].forEach((ev) => window.addEventListener(ev, () => {
+      publisher();
+    }));
   }
 }
 export default new View();

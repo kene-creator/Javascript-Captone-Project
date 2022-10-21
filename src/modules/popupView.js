@@ -1,29 +1,33 @@
-import icon from "../../img/icon.svg";
-import comment from "./comments.js";
+import icon from '../../img/icon.svg';
+import comment from './comments.js';
+/* eslint no-underscore-dangle: ["error", { "allow": ["__place"] }] */
 
 class Popup {
-  _parentEle = document.querySelector(".recipe_cards");
+  _parentEle = document.querySelector('.recipe_cards');
 
   renderPopup(data) {
-    this._parentEle.addEventListener("click", (e) => {
-      const commentBtn = e.target.closest(".recipe_comment");
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.addEventListener('click', (e) => {
+      const commentBtn = e.target.closest('.recipe_comment');
       const body = commentBtn.parentElement.parentElement.parentElement;
 
       if (!commentBtn) return;
 
       data.forEach((obj) => {
         if (commentBtn.id === obj.id) {
+          // eslint-disable-next-line no-underscore-dangle
           const markup = this._generateMarkUp(obj);
-          body.insertAdjacentHTML("beforebegin", markup);
+          body.insertAdjacentHTML('beforebegin', markup);
         }
       });
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderCloseBtn() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const closeBtn = e.target.closest(".close_icon");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const closeBtn = e.target.closest('.close_icon');
 
       if (closeBtn) {
         closeBtn.parentElement.remove();
@@ -31,24 +35,26 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderComment() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const form = e.target.closest(".comment_form");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const form = e.target.closest('.comment_form');
       const parent = form.parentElement.parentElement;
       const text = form.children[1];
+      // eslint-disable-next-line camelcase
       const text_2 = form.children[2];
       const date = new Date();
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        parent.children[1].innerHTML = "Thank you for your Comment";
+        parent.children[1].innerHTML = 'Thank you for your Comment';
         parent.children[2].innerHTML += `
         <p class="comments_dates">
         (${date.toLocaleDateString()}) <span class="comment_text">${
-          text.value
-        }: ${text_2.value}</span>
+  text.value
+}: ${text_2.value}</span>
         </p>`;
         form.reset();
         comment.addComment(e);
@@ -56,6 +62,7 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   _generateMarkUp(data) {
     return `<div class="popup">
     <svg class="close_icon">
@@ -67,8 +74,8 @@ class Popup {
       <div class="popup_publisher">
         <p class="publisher_name">Publisher: <span>${data.publisher}</span></p>
         <p class="publisher_rank">Rank: <span>${Math.floor(
-          data.socialRank
-        )}</span></p>
+    data.socialRank,
+  )}</span></p>
       </div>
     </div>
     <div class="popup_center">
