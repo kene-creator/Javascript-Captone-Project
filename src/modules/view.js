@@ -3,9 +3,12 @@ import "../styles/style.css";
 
 class View {
   _parentEle = document.querySelector(".recipe_cards");
+
   _data;
+
   _errorMessage = "Check your internet connection and try again";
 
+  // eslint-disable-next-line no-underscore-dangle
   renderError(message = this._errorMessage) {
     const markup = `<div class="error">
     <div>
@@ -15,10 +18,13 @@ class View {
     </div>
     <p>${message}</p>
   </div>`;
+    // eslint-disable-next-line no-underscore-dangle
     this._clear();
-    this._parentEle.insertAdjacentHTML("afterbegin", markup);
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line no-underscore-dangle, class-methods-use-this
   _generateMarkUp(data, i) {
     return `<li class="recipe_card">
         <div class="card_detials">
@@ -52,8 +58,10 @@ class View {
       </li>`;
   }
 
+  // eslint-disable-next-line no-underscore-dangle
   _clear() {
-    this._parentEle.innerHTML = "";
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.innerHTML = '';
   }
 
   renderSpinner() {
@@ -64,7 +72,8 @@ class View {
             </svg>
           </div>`;
 
-    this._parentEle.innerHTML = "";
+    // eslint-disable-next-line no-underscore-dangle
+    this._parentEle.innerHTML = '';
     this._parentEle.insertAdjacentHTML("afterbegin", markup);
   }
 
@@ -80,7 +89,7 @@ class View {
 
   addHandlerRender(publisher) {
     ["load"].forEach((ev) =>
-      window.addEventListener(ev, function () {
+      window.addEventListener(ev, () => {
         publisher();
       })
     );

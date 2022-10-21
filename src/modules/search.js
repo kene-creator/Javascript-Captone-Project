@@ -1,22 +1,23 @@
-import icon from "../../img/icon.svg";
+import icon from '../../img/icon.svg';
 
 class Search {
-  _parentElement = document.querySelector(".search");
-  _errorMessage = "Opps! Search not found!";
+  _parentElement = document.querySelector('.search');
+
+  _errorMessage = 'Opps! Search not found!';
 
   getQuery() {
-    const query = this._parentElement.querySelector(".search__field").value;
+    const query = this._parentElement.querySelector('.search__field').value;
     this.clearInputField();
-    this._parentElement.querySelector(".search__field").blur();
+    this._parentElement.querySelector('.search__field').blur();
     return query;
   }
 
   clearInputField() {
-    this._parentElement.querySelector(".search__field").value = "";
+    this._parentElement.querySelector('.search__field').value = '';
   }
 
   addHandler(publisher) {
-    this._parentElement.addEventListener("submit", function (e) {
+    this._parentElement.addEventListener('submit', (e) => {
       e.preventDefault();
       publisher();
     });
@@ -33,12 +34,12 @@ class Search {
   </div>`;
     this._clear();
     document
-      .querySelector(".recipe_cards")
-      .insertAdjacentHTML("afterbegin", markup);
+      .querySelector('.recipe_cards')
+      .insertAdjacentHTML('afterbegin', markup);
   }
 
   _clear() {
-    document.querySelector(".recipe_cards").innerHTML = "";
+    document.querySelector('.recipe_cards').innerHTML = '';
   }
 }
 export default new Search();
