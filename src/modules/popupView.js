@@ -1,12 +1,12 @@
-import icon from "../../img/icon.svg";
-import comment from "./comments.js";
+import icon from '../../img/icon.svg';
+import comment from './comments.js';
 
 class Popup {
-  parentEle = document.querySelector(".recipe_cards");
+  parentEle = document.querySelector('.recipe_cards');
 
   renderPopup(data) {
-    this.parentEle.addEventListener("click", (e) => {
-      const commentBtn = e.target.closest(".recipe_comment");
+    this.parentEle.addEventListener('click', (e) => {
+      const commentBtn = e.target.closest('.recipe_comment');
       const body = commentBtn.parentElement.parentElement.parentElement;
 
       if (!commentBtn) return;
@@ -14,16 +14,16 @@ class Popup {
       data.forEach((obj) => {
         if (commentBtn.id === obj.id) {
           const markup = this.generateMarkUp(obj);
-          body.insertAdjacentHTML("beforebegin", markup);
+          body.insertAdjacentHTML('beforebegin', markup);
         }
       });
     });
   }
 
   renderCloseBtn() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const closeBtn = e.target.closest(".close_icon");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const closeBtn = e.target.closest('.close_icon');
 
       if (closeBtn) {
         closeBtn.parentElement.remove();
@@ -32,23 +32,23 @@ class Popup {
   }
 
   renderComment() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const form = e.target.closest(".comment_form");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const form = e.target.closest('.comment_form');
       const parent = form.parentElement.parentElement;
       const text = form.children[1];
       const textTwo = form.children[2];
       const date = new Date();
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        parent.children[1].innerHTML = "Thank you for your Comment";
+        parent.children[1].innerHTML = 'Thank you for your Comment';
         parent.children[2].innerHTML += `
         <p class="comments_dates">
         (${date.toLocaleDateString()}) <span class="comment_text">${
-          text.value
-        }: ${textTwo.value}</span>
+  text.value
+}: ${textTwo.value}</span>
         </p>`;
         form.reset();
         comment.addComment(e);
@@ -67,8 +67,8 @@ class Popup {
       <div class="popup_publisher">
         <p class="publisher_name">Publisher: <span>${data.publisher}</span></p>
         <p class="publisher_rank">Rank: <span>${Math.floor(
-          data.socialRank
-        )}</span></p>
+    data.socialRank,
+  )}</span></p>
       </div>
     </div>
     <div class="popup_center">

@@ -20,6 +20,7 @@ module.exports = {
     open: true,
     hot: true,
     compress: true,
+    // eslint-disable-next-line linebreak-style
     historyApiFallback: true,
   },
   module: {
@@ -27,7 +28,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
-        'linebreak-style': 0,
       },
       {
         test: /\.js$/,
