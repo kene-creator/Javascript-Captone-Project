@@ -38,19 +38,26 @@ class Popup {
     body.addEventListener('click', (e) => {
       const form = e.target.closest('.comment_form');
       const parent = form.parentElement.parentElement;
+      const commentParent = form.parentElement.parentElement.parentElement;
       const text = form.children[1];
       const textTwo = form.children[2];
       const date = new Date();
+      console.log(parent.children[2]);
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
+        parent.children[0].innerHTML = '';
+        const { length } = parent.children[2].children;
+        parent.children[0].innerHTML = `<p class="popup_name">Comments (${
+          length + 1
+        })`;
         parent.children[1].innerHTML = 'Thank you for your Comment';
         parent.children[2].innerHTML += `
         <p class="comments_dates">
         (${date.toLocaleDateString()}) <span class="comment_text">${
-  text.value
-}: ${textTwo.value}</span>
+          text.value
+        }: ${textTwo.value}</span>
         </p>`;
         form.reset();
         comment.addComment(e);
@@ -70,8 +77,8 @@ class Popup {
       <div class="popup_publisher">
         <p class="publisher_name">Publisher: <span>${data.publisher}</span></p>
         <p class="publisher_rank">Rank: <span>${Math.floor(
-    data.socialRank,
-  )}</span></p>
+          data.socialRank
+        )}</span></p>
       </div>
     </div>
     <div class="popup_center">
