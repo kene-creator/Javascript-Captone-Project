@@ -1,12 +1,12 @@
-import icon from '../../img/icon.svg';
-import '../styles/style.css';
+import icon from "../../img/icon.svg";
+import "../styles/style.css";
 
 class View {
-  parentEle = document.querySelector('.recipe_cards');
+  parentEle = document.querySelector(".recipe_cards");
 
   data;
 
-  errorMessage = 'Check your internet connection and try again';
+  errorMessage = "Check your internet connection and try again!";
 
   renderError(message = this.errorMessage) {
     const markup = `<div class="error">
@@ -20,7 +20,7 @@ class View {
 
     this.clear();
 
-    this.parentEle.insertAdjacentHTML('afterbegin', markup);
+    this.parentEle.insertAdjacentHTML("afterbegin", markup);
   }
 
   generateMarkUp(data, i) {
@@ -34,8 +34,8 @@ class View {
             <use href="${icon}#icon-heart-o" class="heart-o"></use>
           </svg>
           <p class="likes_num"><span>${Math.ceil(
-    Math.random() * 5,
-  )}</span> like</p>
+            Math.random() * 5
+          )}</span> like</p>
             </div>
           </div>
           <div class="links">
@@ -58,7 +58,7 @@ class View {
 
   // eslint-disable-next-line no-underscore-dangle
   clear() {
-    this.parentEle.innerHTML = '';
+    this.parentEle.innerHTML = "";
   }
 
   renderSpinner() {
@@ -69,25 +69,28 @@ class View {
             </svg>
           </div>`;
 
-    this.parentEle.innerHTML = '';
-    this.parentEle.insertAdjacentHTML('afterbegin', markup);
+    this.parentEle.innerHTML = "";
+    this.parentEle.insertAdjacentHTML("afterbegin", markup);
   }
 
   // eslint-disable-next-line consistent-return
   render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
 
     this.data = data;
-    const markup = this.data.map(this.generateMarkUp).join('');
+    const markup = this.data.map(this.generateMarkUp).join("");
     this.clear();
-    return this.parentEle.insertAdjacentHTML('afterbegin', markup);
+    return this.parentEle.insertAdjacentHTML("afterbegin", markup);
   }
 
   // eslint-disable-next-line class-methods-use-this
   addHandlerRender(publisher) {
-    ['load'].forEach((ev) => window.addEventListener(ev, () => {
-      publisher();
-    }));
+    ["load"].forEach((ev) =>
+      window.addEventListener(ev, () => {
+        publisher();
+      })
+    );
   }
 }
 export default new View();
