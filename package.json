@@ -5,11 +5,11 @@
   "main": "index.js",
   "homepage": "http://kene-creator.github.io/Javascript-Captone-Project/dist",
   "scripts": {
-    "start": "webpack serve --open",
+    "start": "webpack serve --mode development",
     "build": "webpack",
     "dev": "webpack serve",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "jest --coverage"
   },
   "author": "",
