@@ -73,6 +73,7 @@ class View {
     this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line consistent-return
   render(data) {
     if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
 
@@ -82,6 +83,7 @@ class View {
     return this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   addHandlerRender(publisher) {
     ['load'].forEach((ev) => window.addEventListener(ev, () => {
       publisher();
