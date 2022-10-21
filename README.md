@@ -34,7 +34,7 @@
 
 ## Author 2
 
-👤 ** Faranosh Amini **
+👤 **Faranosh Amini**
 
 - GitHub: [@FaranoshAmini](https://github.com/FaranoshAmini)
 - LinkedIn: [@Faranosh_Amini](https://www.linkedin.com/in/faranosh-amini-9b925b23a/)
