@@ -20,6 +20,7 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderCloseBtn() {
     const body = document.querySelector('body');
     body.addEventListener('click', (e) => {
@@ -31,6 +32,7 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderComment() {
     const body = document.querySelector('body');
     body.addEventListener('click', (e) => {
@@ -56,6 +58,7 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   generateMarkUp(data) {
     return `<div class="popup">
     <svg class="close_icon">

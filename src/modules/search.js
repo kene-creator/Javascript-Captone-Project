@@ -38,6 +38,7 @@ class Search {
       .insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   clear() {
     document.querySelector('.recipe_cards').innerHTML = '';
   }

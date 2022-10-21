@@ -23,6 +23,7 @@ class View {
     this.parentEle.insertAdjacentHTML('afterbegin', markup);
   }
 
+  // eslint-disable-next-line class-methods-use-this
   generateMarkUp(data, i) {
     return `<li class="recipe_card">
         <div class="card_detials">
