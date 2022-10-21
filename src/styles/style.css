@@ -346,3 +346,8 @@ body {
 #footer-text span {
   color: #f48982;
 }
+
+.count {
+  color: #f48982;
+  font-size: 2rem;
+}
