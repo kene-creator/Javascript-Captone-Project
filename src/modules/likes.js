@@ -1,14 +1,13 @@
 import icon from '../../img/icon.svg';
 
 class Likes {
-  _parentElement = document.querySelector('.recipe_cards');
+  parentElement = document.querySelector('.recipe_cards');
 
   renderLikes() {
-    this._parentElement.addEventListener('click', (e) => {
+    this.parentElement.addEventListener('click', (e) => {
       const likebtn = e.target.closest('.recipe_icon');
       const likeNum = likebtn.nextElementSibling.firstElementChild;
       const num = parseFloat(likeNum.textContent);
-      let i = 0;
       if (!likebtn) return;
       if (likebtn.firstElementChild.classList.contains('heart-o')) {
         likebtn.innerHTML = `<use href="${icon}#icon-heart"></use>`;

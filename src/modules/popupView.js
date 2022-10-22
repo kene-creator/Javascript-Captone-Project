@@ -1,29 +1,31 @@
-import icon from "../../img/icon.svg";
-import comment from "./comments.js";
+import icon from '../../img/icon.svg';
+import comment from './comments.js';
 
+/* eslint-disable */
 class Popup {
-  _parentEle = document.querySelector(".recipe_cards");
+  parentEle = document.querySelector('.recipe_cards');
 
   renderPopup(data) {
-    this._parentEle.addEventListener("click", (e) => {
-      const commentBtn = e.target.closest(".recipe_comment");
+    this.parentEle.addEventListener('click', (e) => {
+      const commentBtn = e.target.closest('.recipe_comment');
       const body = commentBtn.parentElement.parentElement.parentElement;
 
       if (!commentBtn) return;
 
       data.forEach((obj) => {
         if (commentBtn.id === obj.id) {
-          const markup = this._generateMarkUp(obj);
-          body.insertAdjacentHTML("beforebegin", markup);
+          const markup = this.generateMarkUp(obj);
+          body.insertAdjacentHTML('beforebegin', markup);
         }
       });
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderCloseBtn() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const closeBtn = e.target.closest(".close_icon");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const closeBtn = e.target.closest('.close_icon');
 
       if (closeBtn) {
         closeBtn.parentElement.remove();
@@ -31,24 +33,30 @@ class Popup {
     });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderComment() {
-    const body = document.querySelector("body");
-    body.addEventListener("click", (e) => {
-      const form = e.target.closest(".comment_form");
+    const body = document.querySelector('body');
+    body.addEventListener('click', (e) => {
+      const form = e.target.closest('.comment_form');
       const parent = form.parentElement.parentElement;
       const text = form.children[1];
-      const text_2 = form.children[2];
+      const textTwo = form.children[2];
       const date = new Date();
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
-        parent.children[1].innerHTML = "Thank you for your Comment";
+        parent.children[0].innerHTML = '';
+        const { length } = parent.children[2].children;
+        parent.children[0].innerHTML = `<p class="popup_name">Comments (${
+          length + 1
+        })`;
+        parent.children[1].innerHTML = 'Thank you for your Comment';
         parent.children[2].innerHTML += `
         <p class="comments_dates">
         (${date.toLocaleDateString()}) <span class="comment_text">${
           text.value
-        }: ${text_2.value}</span>
+        }: ${textTwo.value}</span>
         </p>`;
         form.reset();
         comment.addComment(e);
@@ -56,7 +64,8 @@ class Popup {
     });
   }
 
-  _generateMarkUp(data) {
+  // eslint-disable-next-line class-methods-use-this
+  generateMarkUp(data) {
     return `<div class="popup">
     <svg class="close_icon">
     <use href="${icon}#icon-cross" class="heart-o"></use>
